@@ -1,0 +1,108 @@
+body {
+    background-color: $bg;
+    margin: 0;
+}
+
+.homepage-header {
+    height: 600px;
+    padding-top: 150px;
+    position: relative;
+
+    &__title {
+        font-size: 70px;
+        margin: 0;
+    }
+
+    &__slogan {
+        font-size: 42px;
+        color: $lightblue;
+        text-transform: uppercase;
+        margin: 10px 0 20px;
+    }
+
+    &--white {
+        color: $white;
+    }
+
+    &__image {
+        position: absolute;
+        width: 650px;
+        top: 0;
+        right: 0;
+    }
+}
+
+.map {
+    background-color: rgba($orange, .3);
+
+    &__content {
+        position: relative;
+        max-width: 1180px;
+        margin: 0 auto;
+
+        &::after {
+            content: '';
+            display: block;
+            position: absolute;
+            height: 3px;
+            width: 130px;
+            top: 50%;
+            left: 30%;
+            background-color: $orange;
+        }
+
+        &::before {
+            content: '';
+            display: block;
+            position: absolute;
+            height: 3px;
+            width: 130px;
+            top: 50%;
+            right: 30%;
+            background-color: $orange;
+        }
+    }
+
+    &__image {
+        display: block;
+        padding: 70px 0;
+        width: 170px;
+        margin: 0 auto;
+        position: relative;
+    }
+
+    &__title {
+        font-size: 24px;
+        color: $white;
+        position: absolute;
+        bottom: 40px;
+        right: 100px;
+        font-family: $font-title;
+    }
+}
+
+.explanation {
+    display: flex;
+
+    &__title {
+        margin-top: 30px;
+    }
+
+    &__image {
+        flex-basis: 20%;
+        margin-top: 30px;
+
+        img {
+           width: 150px;
+        }
+    }
+
+    &__text {
+        display: inline-block;
+        flex-basis: 80%;
+        padding-top: 30px;
+        color: $gray;
+        font-family: $font-title;
+        font-size: 36px;
+    }
+}

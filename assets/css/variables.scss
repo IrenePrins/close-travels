@@ -1,0 +1,50 @@
+//background colors
+$bg: #faf7f7;
+
+//font colors
+$orange: #FFA647;
+$white: #fff;
+$lightblue: #B0E2F1;
+$gray: #707070;
+$yellow: #FFEB65;
+$green: #A0D29D;
+
+//content width
+$content-width: 1180px;
+
+//fonts
+$font-title: 'Roboto Mono', monospace;
+$font-text: 'Hind', sans-serif;
+
+body {
+    font-family: $font-text;
+}
+
+.content-wrapper {
+    max-width: $content-width;
+    margin: 0 auto;
+}
+
+h1 {
+    font-size: 42px;
+    font-family: $font-title;
+    color: $orange;
+}
+
+.button {
+    display: inline-block;
+    color: $gray;
+    padding: 10px 22px;
+    border-radius: 25px;
+    text-decoration: none;
+    font-size: 18px;
+    margin-right: 15px;
+
+    &--yellow {
+        background-color: $yellow;
+    }
+
+    &--green {
+        background-color: rgba($green, .4);
+    }
+}

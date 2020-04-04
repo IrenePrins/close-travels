@@ -1,0 +1,52 @@
+{% extends 'base.html.twig' %}
+
+{% block content %}
+    <div class="content-wrapper">
+        <div class="homepage-header">
+            <h1 class="homepage-header__title">CLOSE TRAVELS</h1>
+            <h2 class="homepage-header__slogan">Enjoy Sustainable</h2>
+            <a class="button button--yellow" href="#">Check the map</a>
+            <a class="button button--green" href="#">How does it work?</a>
+
+            <img class="homepage-header__image" src="{{ asset('build/images/Landen.png') }}">
+        </div>
+    </div>
+
+    <div class="map">
+        <div class="map__content">
+            <img class="map__image" src="{{ asset('build/images/map.png') }}">
+            <h3 class="map__title">Click to explore</h3>
+        </div>
+    </div>
+
+    <div class="content-wrapper">
+    <h1 class="explanation__title">Sustainable Vacations</h1>
+        <div class="explanation">
+            <div class="explanation__image">
+                <img src="{{ asset('build/images/car.png') }}">
+            </div>
+            <h3 class="explanation__text">Travel by car, train or bus</h3>
+        </div>
+
+        <div class="explanation">
+            <div class="explanation__image">
+                <img src="{{ asset('build/images/maps.png') }}">
+            </div>
+            <h3 class="explanation__text">Discover places near you</h3>
+        </div>
+
+        <div class="explanation">
+            <div class="explanation__image">
+                <img src="{{ asset('build/images/mountain.png') }}">
+            </div>
+            <h3 class="explanation__text">Explore your destination sustainable</h3>
+        </div>
+
+        <div class="explanation">
+            <div class="explanation__image">
+                <img src="{{ asset('build/images/suitcase.png') }}">
+            </div>
+            <h3 class="explanation__text">Stay at green hotels or sleep in nature</h3>
+        </div>
+    </div>
+{% endblock %}
