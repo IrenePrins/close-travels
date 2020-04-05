@@ -1,0 +1,70 @@
+.map {
+    padding: 150px 0;
+    position: relative;
+
+    &__map {
+        max-width: 800px;
+        display: block;
+        margin: 0 auto;
+    }
+
+    &-header {
+        position: relative;
+
+        &::after {
+            content: '';
+            display: block;
+            position: absolute;
+            height: 2px;
+            width: 80px;
+            top: 50%;
+            left: 42%;
+            background-color: $orange;
+        }
+
+        &::before {
+            content: '';
+            display: block;
+            position: absolute;
+            height: 2px;
+            width: 80px;
+            top: 50%;
+            right: 42%;
+            background-color: $orange;
+        }
+
+        &__image {
+            width: 50px;
+            display: block;
+            margin: 0 auto;
+        }
+    }
+}
+
+.location {
+    position: absolute;
+
+    &__pointer {
+        width: 40px;
+    }
+
+    &--berlin {
+        top: 333px;
+        right: 270px;
+    }
+
+    &--london {
+        top: 400px;
+        left: 400px;
+    }
+
+    &--amsterdam {
+        top: 355px;
+        left: 585px;
+    }
+
+    &--brussel {
+        top: 450px;
+        left: 545px;
+    }
+}

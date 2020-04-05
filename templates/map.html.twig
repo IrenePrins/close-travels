@@ -1,0 +1,31 @@
+{% extends 'base.html.twig' %}
+
+{% block content %}
+    <div class="map-header">
+        <img class="map-header__image" src="{{ asset('build/images/map.png') }}">
+    </div>
+    <div class="content-wrapper">
+        <div class="map-info">
+            <h1 class="map-info__title">Click on the pointers<br> to see more information!</h1>
+        </div>
+        <div class="map">
+            <img class="map__map" src="{{ asset('build/images/Landen.png') }}">
+
+            <a class="location location--berlin" href="#">
+                <img src="{{ asset('build/images/location_brown.png') }}" class="location__pointer">
+            </a>
+
+            <a class="location location--amsterdam" href="#">
+                <img src="{{ asset('build/images/location_brown.png') }}" class="location__pointer">
+            </a>
+
+            <a class="location location--london" href="#">
+                <img src="{{ asset('build/images/location_brown.png') }}" class="location__pointer">
+            </a>
+
+            <a class="location location--brussel" href="#">
+                <img src="{{ asset('build/images/location_brown.png') }}" class="location__pointer">
+            </a>
+        </div>
+    </div>
+{% endblock %}

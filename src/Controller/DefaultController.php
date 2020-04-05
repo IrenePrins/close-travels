@@ -25,4 +25,12 @@ class DefaultController
     {
         return new Response($this->twig->render('homepage.html.twig'));
     }
+
+    /**
+     * @Route("/map", name="map")
+     */
+    public function map()
+    {
+        return new Response($this->twig->render('map.html.twig'));
+    }
 }
