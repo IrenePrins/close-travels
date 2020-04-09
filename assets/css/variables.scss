@@ -8,12 +8,17 @@ $lightblue: #B0E2F1;
 $gray: #707070;
 $yellow: #FFEB65;
 $green: #A0D29D;
+$darker-green: #79af79;
 
 //content width
 $content-width: 1180px;
 
+//color
+$mercury: #e2e2e2;
+$baba: #9e9e9e;
+
 //fonts
-$font-title: 'Roboto Mono', monospace;
+$font-title: 'Roboto Thin', monospace;
 $font-text: 'Hind', sans-serif;
 
 body {
@@ -29,6 +34,7 @@ h1 {
     font-size: 42px;
     font-family: $font-title;
     color: $orange;
+    font-weight: 400;
 }
 
 .button {

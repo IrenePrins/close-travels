@@ -19,7 +19,8 @@
   },
   "homepage": "https://github.com/IrenePrins/close-travels#readme",
   "dependencies": {
-    "sass": "^1.26.3"
+    "sass": "^1.26.3",
+    "tiny-slider": "^2.9.2"
   },
   "devDependencies": {
     "@symfony/webpack-encore": "^0.28.3",

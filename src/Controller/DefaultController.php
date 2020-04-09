@@ -33,4 +33,12 @@ class DefaultController
     {
         return new Response($this->twig->render('map.html.twig'));
     }
+
+    /**
+     * @Route("/detail", name="detail")
+     */
+    public function detail()
+    {
+        return new Response($this->twig->render('detail.html.twig'));
+    }
 }

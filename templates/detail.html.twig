@@ -1,0 +1,38 @@
+{% extends 'base.html.twig' %}
+
+{% block content %}
+
+<div class="detail">
+    <div class="content-wrapper">
+        <h1 class="detail__title">Berlin</h1>
+    </div>
+        <div class="detail__slider slider">
+            <div class="slider__item" style="background-image: url('build/images/berlin1.jpg')"></div>
+            <div class="slider__item" style="background-image: url('build/images/berlin2.jpg')"></div>
+            <div class="slider__item" style="background-image: url('build/images/berlin3.jpg')"></div>
+            <div class="slider__item" style="background-image: url('build/images/berlin1.jpg')"></div>
+        </div>
+    <div class="content-wrapper">
+        <div class="detail-activities">
+            <h2 class="detail-activities__title">Activities</h2>
+        </div>
+    </div>
+    <div class="detail-transportation">
+        <div class="content-wrapper">
+            <h2 class="detail-transportation__title">Transportation</h2>
+            <div class="transportation-options">
+                <div class="transportation-options__item">
+                    <img class="transportation-options__image" src="{{ asset('build/images/car2.png') }}">
+                </div>
+                <div class="transportation-options__item">
+                    <img class="transportation-options__image" src="{{ asset('build/images/bus.png') }}">
+                </div>
+                <div class="transportation-options__item">
+                    <img class="transportation-options__image" src="{{ asset('build/images/train.png') }}">
+                </div>
+            </div>
+        </div>
+    </div>
+
+</div>
+{% endblock %}

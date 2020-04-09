@@ -1,0 +1,98 @@
+.detail {
+    &__title {
+        text-align: center;
+        position: relative;
+        font-size: 62px;
+
+        &::after {
+            content: '';
+            display: block;
+            position: absolute;
+            height: 3px;
+            width: 130px;
+            top: 50%;
+            left: 29%;
+            background-color: $orange;
+        }
+
+        &::before {
+            content: '';
+            display: block;
+            position: absolute;
+            height: 3px;
+            width: 130px;
+            top: 50%;
+            right: 29%;
+            background-color: $orange;
+        }
+    }
+
+    &-activities {
+        &__title {
+            color: $green;
+            font-size: 35px;
+            font-family: $font-title;
+            font-weight: 300;
+        }
+    }
+
+    &-transportation {
+        background-color: $lightblue;
+
+        &__title {
+            color: $white;
+            font-size: 35px;
+            font-family: $font-title;
+            font-weight: 300;
+        }
+    }
+}
+
+.transportation-options {
+    display: flex;
+    flex-wrap: nowrap;
+
+    &__item {
+        $width: percentage(1/3);
+        flex-basis: $width;
+    }
+
+    &__image {
+        width: 300px;
+    }
+}
+
+.slider {
+    &__item {
+        height: 300px;
+        background-size: cover;
+        background-repeat: no-repeat;
+        background-position: center;
+        margin-right: 15px;
+    }
+}
+
+.tns-nav {
+    text-align: center;
+
+    button {
+        background-color: $green;
+        height: 15px;
+        width: 15px;
+        border-radius: 50%;
+        border: 1px solid $baba;
+        margin-right: 2px;
+        margin-top: 15px;
+    }
+
+    .tns-nav-active {
+        background-color: $darker-green;
+    }
+}
+
+.tns-outer {
+    button[data-action="stop"], button[data-action="start"] {
+        display: none;
+        pointer-events: none;
+    }
+}
