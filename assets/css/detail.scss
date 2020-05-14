@@ -27,17 +27,9 @@
         }
     }
 
-    &-activities {
-        &__title {
-            color: $green;
-            font-size: 35px;
-            font-family: $font-title;
-            font-weight: 300;
-        }
-    }
-
     &-transportation {
         background-color: $lightblue;
+        padding: 50px 0;
 
         &__title {
             color: $white;
@@ -48,17 +40,74 @@
     }
 }
 
+.activities-wrapper {
+    display: flex;
+    flex-wrap: nowrap;
+    justify-content: space-between;
+}
+
+.activities {
+    &__title {
+        color: $green;
+        font-size: 35px;
+        font-family: $font-title;
+        font-weight: 300;
+    }
+    &__image {
+        height: 100px;
+    }
+}
+
 .transportation-options {
     display: flex;
     flex-wrap: nowrap;
+    justify-content: space-between;
 
-    &__item {
+    .transportation {
+        display: flex;
+        flex-direction: column;
         $width: percentage(1/3);
-        flex-basis: $width;
-    }
+        width: calc(#{$width} - 20px);
+        padding-top: 50px;
 
-    &__image {
-        width: 300px;
+        &__image-wrapper {
+            height: 100px;
+        }
+
+        &__image {
+            width: 300px;
+
+            &--car {
+                width: 200px
+            }
+
+            &--bus {
+                width: 300px
+            }
+
+            &--train {
+                width: 300px;
+                padding-top: 40px;
+            }
+        }
+
+        &__time {
+            display: block;
+            padding-top: 50px;
+            font-size: 30px;
+            color: $gray;
+
+            &-icon {
+                font-size: 30px;
+                margin-right: 10px;
+                color: $orange;
+                vertical-align: sub;
+            }
+        }
+
+        &__explanation {
+            color: $gray;
+        }
     }
 }
 

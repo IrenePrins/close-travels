@@ -1,0 +1,30 @@
+.login {
+    display: flex;
+
+    &__image {
+        flex-basis: 50%;
+    }
+}
+
+.form {
+    &-group {
+        display: flex;
+        flex-direction: column;
+
+        label {
+            color: $orange;
+            font-family: $font-text;
+            margin-top: 15px;
+        }
+
+        input {
+            padding: 15px;
+            border-radius: 20px;
+            border: solid 1px $mercury;
+        }
+    }
+
+    &--login {
+        flex-basis: 50%;
+    }
+}
