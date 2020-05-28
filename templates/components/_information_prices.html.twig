@@ -1,0 +1,36 @@
+<div class="content-wrapper">
+    <div class="prices">
+        <div class="prices-transport">
+            <div class="housing-transport__option"><img class="transportation__image transportation__image--plane" src="{{ asset('build/images/train.png') }}"></div>
+            <div class="housing-transport__option"><img class="transportation__image transportation__image--plane" src="{{ asset('build/images/bus.png') }}"></div>
+            <div class="housing-transport__option"><img class="transportation__image transportation__image--plane" src="{{ asset('build/images/car2.png') }}"></div>
+            <div class="housing-transport__option"><img class="transportation__image transportation__image--plane" src="{{ asset('build/images/plane.png') }}"></div>
+        </div>
+        <div class="prices-activities">
+            <h2 class="prices-activities__title">What activities will you enjoy?</h2>
+            <div class="prices-activities__option">
+                <h3 class="prices-activities__option-title">Brandenburg Tor</h3>
+                {% include 'components/environment_rating.html.twig' with {
+                    'modifier' : "4"
+                } %}
+            </div>
+            <div class="prices-activities__option">
+                <h3 class="prices-activities__title">Holocaust Museum</h3>
+                {% include 'components/environment_rating.html.twig' with {
+                    'modifier' : "3"
+                } %}
+            </div>
+            <div class="prices-activities__option">
+                <h3 class="prices-activities__title">Citytour on bike</h3>
+                {% include 'components/environment_rating.html.twig' with {
+                    'modifier' : "4"
+                } %}
+            </div>
+        </div>
+        <div class="prices-housing">
+            <div class="housing-transport__option"><img class="transportation__image transportation__image--plane" src="{{ asset('build/images/plane.png') }}"></div>
+            <div class="housing-transport__option"><img class="transportation__image transportation__image--plane" src="{{ asset('build/images/plane.png') }}"></div>
+            <div class="housing-transport__option"><img class="transportation__image transportation__image--plane" src="{{ asset('build/images/plane.png') }}"></div>
+        </div>
+    </div>
+</div>

@@ -1,1 +1,10 @@
 {% extends 'base.html.twig' %}
+
+{% block content %}
+    <div class="content-wrapper">
+        {% include 'components/sidemenu.html.twig' %}
+        {% block form %}{% endblock %}
+    </div>
+{% endblock %}
+
+

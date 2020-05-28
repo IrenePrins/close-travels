@@ -12,5 +12,4 @@ import '../css/app.scss';
 // import $ from 'jquery';
 
 import './slider';
-
-console.log('Hello Webpack Encore! Edit me in assets/js/app.js');
+import './toolbox';

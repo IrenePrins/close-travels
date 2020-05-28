@@ -27,12 +27,35 @@
         }
     }
 
+    &__introduction {
+        padding: 25px 0;
+        max-width: 1160px;
+        margin: 100px auto;
+
+        &-wrapper {
+            background-color: $orange;
+
+        }
+
+        &-title {
+            font-family: $font-title;
+            font-size: 35px;
+            font-weight: 300;
+            color: #faf7f7;
+        }
+
+        &-text {
+            width: 50%;
+            color: #faf7f7;
+        }
+    }
+
     &-transportation {
         background-color: $lightblue;
         padding: 50px 0;
 
         &__title {
-            color: $white;
+            color: $darkblue;
             font-size: 35px;
             font-family: $font-title;
             font-weight: 300;
@@ -41,9 +64,12 @@
 }
 
 .activities-wrapper {
-    display: flex;
-    flex-wrap: nowrap;
-    justify-content: space-between;
+
+    @media screen and (min-width: 769px) {
+        display: flex;
+        flex-wrap: nowrap;
+        justify-content: space-between;
+    }
 }
 
 .activities {
@@ -53,61 +79,37 @@
         font-family: $font-title;
         font-weight: 300;
     }
-    &__image {
-        height: 100px;
-    }
 }
+.activity {
+    padding-bottom: 50px;
 
-.transportation-options {
-    display: flex;
-    flex-wrap: nowrap;
-    justify-content: space-between;
-
-    .transportation {
-        display: flex;
-        flex-direction: column;
+    @media screen and (min-width: 769px) {
         $width: percentage(1/3);
-        width: calc(#{$width} - 20px);
-        padding-top: 50px;
+        flex-basis: calc(#{$width} - 35px);
+        padding-bottom: 100px;
+    }
 
-        &__image-wrapper {
-            height: 100px;
-        }
 
-        &__image {
-            width: 300px;
+    &__title {
+        color: $green;
+        font-size: 20px;
+        font-family: $font-text;
+        font-weight: 300;
+        margin: 10px 0;
+    }
 
-            &--car {
-                width: 200px
-            }
+    &__text {
+        color: $gray;
+        font-family: $font-text;
+        margin: 0;
+    }
 
-            &--bus {
-                width: 300px
-            }
-
-            &--train {
-                width: 300px;
-                padding-top: 40px;
-            }
-        }
-
-        &__time {
-            display: block;
-            padding-top: 50px;
-            font-size: 30px;
-            color: $gray;
-
-            &-icon {
-                font-size: 30px;
-                margin-right: 10px;
-                color: $orange;
-                vertical-align: sub;
-            }
-        }
-
-        &__explanation {
-            color: $gray;
-        }
+    &__image {
+        height: 250px;
+        background-position: center;
+        background-repeat: no-repeat;
+        background-size: cover;
+        border-radius: 20px;
     }
 }
 

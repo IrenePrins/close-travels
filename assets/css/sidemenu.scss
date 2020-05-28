@@ -1,0 +1,38 @@
+.sidemenu {
+    width: 20%;
+
+    &__user {
+        height: 100px;
+        background-color: rgba($lightblue, 0.3);
+        border-radius: 25px 25px 0 0;
+        padding: 20px;
+
+        &-name {
+            display: inline-block;
+        }
+
+        &-image {
+            display: inline-block;
+            width: 30%;
+        }
+    }
+
+    &__list {
+
+        height: 300px;
+        display: flex;
+        flex-direction: column;
+
+        &-item {
+            background-color: rgba($lightblue, 0.3);
+            text-decoration: none;
+            padding: 10px 20px 10px;
+            color: black;
+
+            &:hover {
+                background-color: rgba($lightblue, 0.6);
+            }
+
+        }
+    }
+}

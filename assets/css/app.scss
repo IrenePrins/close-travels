@@ -1,6 +1,10 @@
 @import 'variables.scss';
 @import 'homepage.scss';
 @import 'map.scss';
-@import 'navigation.scss';
+@import 'components/navigation';
+@import 'components/environmental_rating';
+@import 'components/transportation';
+@import 'components/prices';
 @import 'detail.scss';
-@import "form/form.scss";
+@import 'form/form.scss';
+@import 'sidemenu.scss';

@@ -19,6 +19,7 @@
   },
   "homepage": "https://github.com/IrenePrins/close-travels#readme",
   "dependencies": {
+    "core-js": "^3.6.5",
     "sass": "^1.26.3",
     "tiny-slider": "^2.9.2"
   },

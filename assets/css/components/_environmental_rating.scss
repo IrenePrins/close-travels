@@ -1,0 +1,38 @@
+.environment-rating {
+
+    display: flex;
+    flex-wrap: nowrap;
+    margin: 0 auto;
+}
+
+.leaf {
+    padding: 20px 5px;
+    background-repeat: no-repeat;
+    display: block;
+
+    &__image {
+        height: 50px;
+    }
+
+    &__info {
+        margin-left: 100px;
+        position: relative;
+        color: $green;
+        cursor: pointer;
+    }
+
+    &__description {
+        background-color: $darker-green;
+        padding: 10px;
+        border-radius: 5px;
+        position: absolute;
+        width: 150px;
+        color: white;
+        display: none;
+
+        &--show {
+            display: block;
+        }
+    }
+}
+

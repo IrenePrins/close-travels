@@ -1,0 +1,116 @@
+{% if modifier is same as("0") %}
+<div class="environment-rating">
+    <div class="leaf">
+        <img class="leaf__image" src="{{ asset('build/images/leafgray.png') }}"/>
+    </div>
+    <div class="leaf">
+        <img class="leaf__image" src="{{ asset('build/images/leafgray.png') }}"/>
+    </div>
+    <div class="leaf">
+        <img class="leaf__image" src="{{ asset('build/images/leafgray.png') }}"/>
+    </div>
+    <div class="leaf">
+        <img class="leaf__image" src="{{ asset('build/images/leafgray.png') }}"/>
+    </div>
+    {% if text is defined and text is not empty %}
+        <div class="leaf leaf__info">
+            <i class="material-icons leaf__icon">info</i>
+            <div class="leaf__description">
+                {{- text -}}
+            </div>
+        </div>
+    {% endif %}
+</div>
+{% elseif modifier is same as("1") %}
+    <div class="environment-rating">
+        <div class="leaf">
+            <img class="leaf__image" src="{{ asset('build/images/leafgreen.png') }}"/>
+        </div>
+        <div class="leaf">
+            <img class="leaf__image" src="{{ asset('build/images/leafgray.png') }}"/>
+        </div>
+        <div class="leaf">
+            <img class="leaf__image" src="{{ asset('build/images/leafgray.png') }}"/>
+        </div>
+        <div class="leaf">
+            <img class="leaf__image" src="{{ asset('build/images/leafgray.png') }}"/>
+        </div>
+        {% if text is defined and text is not empty %}
+            <div class="leaf leaf__info">
+                <i class="material-icons leaf__icon">info</i>
+                <div class="leaf__description">
+                    {{- text -}}
+                </div>
+            </div>
+        {% endif %}
+    </div>
+{% elseif modifier is same as("2") %}
+    <div class="environment-rating">
+        <div class="leaf">
+            <img class="leaf__image" src="{{ asset('build/images/leafgreen.png') }}"/>
+        </div>
+        <div class="leaf">
+            <img class="leaf__image" src="{{ asset('build/images/leafgreen.png') }}"/>
+        </div>
+        <div class="leaf">
+            <img class="leaf__image" src="{{ asset('build/images/leafgray.png') }}"/>
+        </div>
+        <div class="leaf">
+            <img class="leaf__image" src="{{ asset('build/images/leafgray.png') }}"/>
+        </div>
+        {% if text is defined and text is not empty %}
+            <div class="leaf leaf__info">
+                <i class="material-icons leaf__icon">info</i>
+                <div class="leaf__description">
+                    {{- text -}}
+                </div>
+            </div>
+        {% endif %}
+    </div>
+{% elseif modifier is same as("3") %}
+    <div class="environment-rating">
+        <div class="leaf">
+            <img class="leaf__image" src="{{ asset('build/images/leafgreen.png') }}"/>
+        </div>
+        <div class="leaf">
+            <img class="leaf__image" src="{{ asset('build/images/leafgreen.png') }}"/>
+        </div>
+        <div class="leaf">
+            <img class="leaf__image" src="{{ asset('build/images/leafgreen.png') }}"/>
+        </div>
+        <div class="leaf">
+            <img class="leaf__image" src="{{ asset('build/images/leafgray.png') }}"/>
+        </div>
+        {% if text is defined and text is not empty %}
+            <div class="leaf leaf__info">
+                <i class="material-icons leaf__icon">info</i>
+                <div class="leaf__description">
+                    {{- text -}}
+                </div>
+            </div>
+        {% endif %}
+    </div>
+{% else %}
+    <div class="environment-rating">
+        <div class="leaf">
+            <img class="leaf__image" src="{{ asset('build/images/leafgreen.png') }}"/>
+        </div>
+        <div class="leaf">
+            <img class="leaf__image" src="{{ asset('build/images/leafgreen.png') }}"/>
+        </div>
+        <div class="leaf">
+            <img class="leaf__image" src="{{ asset('build/images/leafgreen.png') }}"/>
+        </div>
+        <div class="leaf">
+            <img class="leaf__image" src="{{ asset('build/images/leafgreen.png') }}"/>
+        </div>
+        {% if text is defined and text is not empty %}
+            <div class="leaf leaf__info">
+                <i class="material-icons leaf__icon">info</i>
+                <div class="leaf__description">
+                    {{- text -}}
+                </div>
+            </div>
+        {% endif %}
+    </div>
+{% endif %}

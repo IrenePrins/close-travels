@@ -1,12 +1,10 @@
 {% extends 'base.html.twig' %}
 
-{% block title %}Log in!{% endblock %}
-
 {% block content %}
 
 <div class="content-wrapper">
-    <div class="login">
-            <div class="login__image">
+    <div class="user-form">
+            <div class="user-form__image">
                 <img class="map-cta__image" src="{{ asset('build/images/map.png') }}">
             </div>
             <div class="form form--login">
@@ -17,7 +15,7 @@
 
                     {% if app.user %}
                         <div class="mb-3">
-                            You are logged in as {{ app.user.username }}, <a href="{{ path('app_logout') }}">Logout</a>
+                            You are logged in as <span class="span--blue">{{ app.user.username }}</span>, <a href="{{ path('app_logout') }}" class="link-accent">Logout</a>
                         </div>
                     {% endif %}
                     <h1 class="h3 mb-3 font-weight-normal">Login</h1>

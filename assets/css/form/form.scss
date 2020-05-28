@@ -1,4 +1,4 @@
-.login {
+.user-form {
     display: flex;
 
     &__image {
@@ -10,21 +10,25 @@
     &-group {
         display: flex;
         flex-direction: column;
-
-        label {
-            color: $orange;
-            font-family: $font-text;
-            margin-top: 15px;
-        }
-
-        input {
-            padding: 15px;
-            border-radius: 20px;
-            border: solid 1px $mercury;
-        }
     }
 
     &--login {
         flex-basis: 50%;
     }
+}
+
+.user-form__form {
+    flex-basis: 50%;
+}
+
+label {
+    color: $orange;
+    font-family: $font-text;
+    margin-top: 15px;
+}
+
+input {
+    padding: 15px;
+    border-radius: 20px;
+    border: solid 1px $mercury;
 }

@@ -1,0 +1,13 @@
+<div class="sidemenu">
+    <div class="sidemenu__user">
+        <img class="sidemenu__user-image" src="{{ asset('build/images/map.png') }}">
+        {% if app.user.firstname is defined %}
+            <span class="sidemenu__user-name">{{ app.user.firstname }} {{ app.user.lastname }}</span>
+        {% endif %}
+    </div>
+    <div class="sidemenu__list">
+        <a class="sidemenu__list-item" href="#">Destination</a>
+        <a class="sidemenu__list-item" href="#">Hotel</a>
+        <a class="sidemenu__list-item" href="#">Activities</a>
+    </div>
+</div>

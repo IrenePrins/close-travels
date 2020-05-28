@@ -1,0 +1,40 @@
+.navigation {
+    display: flex;
+    background-color: rgba($orange, .4);
+    max-width: 80%;
+    border-radius: 50px;
+    border: 1px solid $orange;
+    padding: 0 30px;
+    margin: 30px auto;
+
+    &__list {
+        display: flex;
+        padding-left: 0;
+
+        &-item {
+            list-style: none;
+
+            &--user {
+
+            }
+        }
+    }
+
+    &__item {
+        text-decoration: none;
+        color: $white;
+        font-size: 30px;
+        font-family: 'Roboto Thin', monospace;
+        padding: 0 10px;
+
+        &--orange {
+            color: $orange;
+            font-family: $font-text;
+            font-size: 24px;
+        }
+    }
+
+    &__user {
+        margin-left: auto;
+    }
+}

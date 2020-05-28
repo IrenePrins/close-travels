@@ -10,79 +10,63 @@
             <div class="slider__item" style="background-image: url('build/images/berlin1.jpg')"></div>
             <div class="slider__item" style="background-image: url('build/images/berlin2.jpg')"></div>
             <div class="slider__item" style="background-image: url('build/images/berlin3.jpg')"></div>
-            <div class="slider__item" style="background-image: url('build/images/berlin1.jpg')"></div>
+            <div class="slider__item" style="background-image: url('build/images/berlin4.jpg')"></div>
+            <div class="slider__item" style="background-image: url('build/images/berlin5.jpg')"></div>
         </div>
+    <div class="detail__introduction-wrapper">
+        <div class="detail__introduction">
+            <h2 class="detail__introduction-title">Berlin, the city of Freedom</h2>
+            <p class="detail__introduction-text">Berlin (/bɜːrˈlɪn/; German: [bɛʁˈliːn] (About this soundlisten)) is the capital and largest city of Germany by both area and population.[5][6] Its 3,769,495 (2019)[2] inhabitants make it the most populous city proper of the European Union.[7] The city is one of Germany's 16 federal states. It is surrounded by the state of Brandenburg, and contiguous with Potsdam, Brandenburg's capital. The two cities are at the center of the Berlin-Brandenburg capital region, which is, with about six million inhabitants and an area of more than 30,000 km²,[8] Germany's third-largest metropolitan region after the Rhine-Ruhr and Rhine-Main regions.</p>
+        </div>
+    </div>
     <div class="content-wrapper">
         <h2 class="activities__title">Activities</h2>
         <div class="activities-wrapper">
-            <div class="activities">
-                <div class="activities__image" style="background-image: url('build/images/berlin1.jpg')"></div>
-                <p class="activities__text">
-                    en. Lorem Ipsum is de standaard proeftekst in deze bedrijfstak sinds de 16e eeuw,
-                    toen een onbekende drukker een zethaak met letters nam en ze door elkaar husselde om een
-                    font-catalogus te maken. Het heeft
+            <div class="activity">
+                <div class="activity__image" style="background-image: url('build/images/berlin1.jpg')"></div>
+
+                {% include 'components/environment_rating.html.twig' with {
+                    'modifier' : "4",
+                    'text'     : 'This activity is outdoors. Tip: Go on foot! You will see beautiful sight seeing.'
+                } %}
+
+                <h3 class="activity__title">Brandenburger Tor</h3>
+                <p class="activity__text">
+                    The Brandenburg Gate is one of the most iconic sights in today’s vibrant Berlin. More than just Berlin’s only surviving historical city gate, this site came to symbolise Berlin’s Cold War division into East and West – and, since the fall of the Wall, a reunified Germany. Architecturally, the sandstone Brandenburg Gate also represents one of the earliest and most attractive examples of a neo-classical building in Germany.
                 </p>
             </div>
-            <div class="activities">
-                <div class="activities__image" style="background-image: url('build/images/berlin1.jpg')"></div>
-                <p class="activities__text">
-                    en. Lorem Ipsum is de standaard proeftekst in deze bedrijfstak sinds de 16e eeuw,
-                    toen een onbekende drukker een zethaak met letters nam en ze door elkaar husselde om een
-                    font-catalogus te maken. Het heeft
+            <div class="activity">
+                <div class="activity__image" style="background-image: url('build/images/berlin3.jpg')"></div>
+
+                {% include 'components/environment_rating.html.twig' with {
+                    'modifier' : "3",
+                    'text'     : 'This activity is a cultural experience inside en outside.'
+                } %}
+
+                <h3 class="activity__title">Visit the holocaust museum</h3>
+                <p class="activity__text">
+                    A place of contemplation, a place of remembrance and warning. Close to the Brandenburg Gate in the heart of Berlin you will find the Memorial to the Murdered Jews of Europe.The memorial to the Shoah is supplemented by the underground information centre, also designed by Eisenman. In a space covering 800 square metres you can find information on the victims and the locations.
                 </p>
             </div>
-            <div class="activities">
-                <div class="activities__image" style="background-image: url('build/images/berlin1.jpg')"></div>
-                <p class="activities__text">
-                    en. Lorem Ipsum is de standaard proeftekst in deze bedrijfstak sinds de 16e eeuw,
-                    toen een onbekende drukker een zethaak met letters nam en ze door elkaar husselde om een
-                    font-catalogus te maken. Het heeft
+            <div class="activity">
+                <div class="activity__image" style="background-image: url('build/images/berlin2.jpg')"></div>
+
+                {% include 'components/environment_rating.html.twig' with {
+                    'modifier' : "4",
+                    'text'     : 'This activity is in the outdoors. And even better: It is healthy!'
+                } %}
+
+                <h3 class="activity__title">Bike Tour</h3>
+                <p class="activity__text">
+                    A guided bicycle tour is the best way to discover Berlin. In smaller, individualized groups, you’ll enjoy the city’s expansive, green and primarily flat urban landscape. You will see some of Berlin’s most interesting, exciting and unexpected places.
                 </p>
             </div>
         </div>
     </div>
-    <div class="detail-transportation">
-        <div class="content-wrapper">
-            <div class="transportation-options">
-                <div class="transportation">
-                    <div class="transportation__image-wrapper">
-                        <img class="transportation__image transportation__image--car" src="{{ asset('build/images/car2.png') }}">
-                    </div>
-                    <span class="transportation__time"><i class="material-icons transportation__time-icon">access_time</i>7 hours</span>
-                    <p class="transportation__explanation">
-                        m Ipsum is slechts een proeftekst uit het drukkerij- en
-                        zetterijwezen. Lorem Ipsum is de standaard proeftekst in deze bedrijfstak sinds de 16e eeuw,
-                        toen een onbekende drukker een zethaak met letters nam en ze door elkaar husselde om een
-                        font-catalogus te maken. Het heeft
-                    </p>
-                </div>
-                <div class="transportation">
-                    <div class="transportation__image-wrapper">
-                        <img class="transportation__image transportation__image--bus" src="{{ asset('build/images/bus.png') }}">
-                    </div>
-                    <span class="transportation__time"><i class="material-icons transportation__time-icon">access_time</i>7 hours</span>
-                    <p class="transportation__explanation">
-                        m Ipsum is slechts een proeftekst uit het drukkerij- en
-                        zetterijwezen. Lorem Ipsum is de standaard proeftekst in deze bedrijfstak sinds de 16e eeuw,
-                        toen een onbekende drukker een zethaak met letters nam en ze door elkaar husselde om een
-                        font-catalogus te maken. Het heeft
-                    </p>
-                </div>
-                <div class="transportation">
-                    <div class="transportation__image-wrapper">
-                        <img class="transportation__image transportation__image--train" src="{{ asset('build/images/train.png') }}">
-                    </div>
-                    <span class="transportation__time"><i class="material-icons transportation__time-icon">access_time</i> 7 hours</span>
-                    <p class="transportation__explanation">
-                        m Ipsum is slechts een proeftekst uit het drukkerij- en
-                        zetterijwezen. Lorem Ipsum is de standaard proeftekst in deze bedrijfstak sinds de 16e eeuw,
-                        toen een onbekende drukker een zethaak met letters nam en ze door elkaar husselde om een
-                        font-catalogus te maken. Het heeft
-                    </p>
-                </div>
-            </div>
-        </div>
-    </div>
+
+    {% include 'components/_transportation.html.twig' %}
+
+    {% include 'components/_information_prices.html.twig' %}
 
 </div>
 {% endblock %}

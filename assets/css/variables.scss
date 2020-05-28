@@ -5,6 +5,7 @@ $bg: #faf7f7;
 $orange: #FFA647;
 $white: #fff;
 $lightblue: #B0E2F1;
+$darkblue: #587178;
 $gray: #707070;
 $yellow: #FFEB65;
 $green: #A0D29D;
@@ -45,12 +46,36 @@ h1 {
     text-decoration: none;
     font-size: 18px;
     margin: 15px 15px 15px 0;
+    cursor: pointer;
 
     &--yellow {
         background-color: $yellow;
+
+        &:hover {
+            background-color: rgba($yellow, 0.8);
+        }
     }
 
     &--green {
         background-color: rgba($green, .4);
+
+        &:hover {
+            background-color: rgba($green, 0.1);
+        }
+    }
+}
+
+.link-accent {
+    text-decoration: none;
+    color: black;
+
+    &:hover {
+        border-bottom: 3px solid $lightblue;
+    }
+}
+
+.span {
+    &--blue {
+        color: $lightblue;
     }
 }

@@ -1,0 +1,76 @@
+<div class="detail-transportation">
+    <div class="content-wrapper">
+        <h2 class="detail-transportation__title">Transportation</h2>
+        <div class="transportation-options">
+            <div class="transportation">
+                <div class="transportation__image-wrapper">
+                    <img class="transportation__image transportation__image--car" src="{{ asset('build/images/car2.png') }}">
+                </div>
+
+                {% include 'components/environment_rating.html.twig' with {
+                    'modifier' : "1",
+                    'text'     : 'The car is the fastest but not the most environmentally friendliest'
+                } %}
+
+                <span class="transportation__time"><i class="material-icons transportation__time-icon">access_time</i>7 hours</span>
+                <p class="transportation__explanation">
+                    m Ipsum is slechts een proeftekst uit het drukkerij- en
+                    zetterijwezen. Lorem Ipsum is de standaard proeftekst in deze bedrijfstak sinds de 16e eeuw,
+                    toen een onbekende drukker een zethaak met letters nam en ze door elkaar husselde om een
+                    font-catalogus te maken. Het heeft
+                </p>
+            </div>
+            <div class="transportation">
+                <div class="transportation__image-wrapper">
+                    <img class="transportation__image transportation__image--bus" src="{{ asset('build/images/bus.png') }}">
+                </div>
+
+                {% include 'components/environment_rating.html.twig' with {
+                    'modifier' : "2",
+                    'text'     : 'Going with the bus is more environmental friendly than the car!'
+                } %}
+
+                <span class="transportation__time"><i class="material-icons transportation__time-icon">access_time</i>9:35 hours</span>
+                <p class="transportation__explanation">
+                    If your going with the bus. You will be taking the flixbus. Flixbus might take longer but is cheaper and more environmental friendly! Getting you from A to B stress free: thanks to real-time bus stop information, up-to-date and current bus schedules, helpful staff and friendly on-site bus drivers, you don't need to worry about a thing. You can plan your bus trip and jump on board feeling completely relaxed.
+                </p>
+            </div>
+            <div class="transportation">
+                <div class="transportation__image-wrapper">
+                    <img class="transportation__image transportation__image--train" src="{{ asset('build/images/train.png') }}">
+                </div>
+
+                {% include 'components/environment_rating.html.twig' with {
+                    'modifier' : "2",
+                    'text'     : 'Train is as fast as the car and more environmental friendly!'
+                } %}
+
+                <span class="transportation__time"><i class="material-icons transportation__time-icon">access_time</i> 7 hours</span>
+                <p class="transportation__explanation">
+                    m Ipsum is slechts een proeftekst uit het drukkerij- en
+                    zetterijwezen. Lorem Ipsum is de standaard proeftekst in deze bedrijfstak sinds de 16e eeuw,
+                    toen een onbekende drukker een zethaak met letters nam en ze door elkaar husselde om een
+                    font-catalogus te maken. Het heeft
+                </p>
+            </div>
+            <div class="transportation">
+                <div class="transportation__image-wrapper">
+                    <img class="transportation__image transportation__image--plane" src="{{ asset('build/images/plane.png') }}">
+                </div>
+
+                {% include 'components/environment_rating.html.twig' with {
+                    'modifier' : "0",
+                    'text'     : 'If you want to go with the plane there is an CO2 compensation'
+                } %}
+
+                <span class="transportation__time"><i class="material-icons transportation__time-icon">access_time</i>3 hours</span>
+                <p class="transportation__explanation">
+                    m Ipsum is slechts een proeftekst uit het drukkerij- en
+                    zetterijwezen. Lorem Ipsum is de standaard proeftekst in deze bedrijfstak sinds de 16e eeuw,
+                    toen een onbekende drukker een zethaak met letters nam en ze door elkaar husselde om een
+                    font-catalogus te maken. Het heeft
+                </p>
+            </div>
+        </div>
+    </div>
+</div>

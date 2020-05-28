@@ -1,0 +1,20 @@
+.prices {
+    &-activities {
+        &__option {
+            display: flex;
+
+            &-title {
+                font-family: $font-title;
+                color: $green;
+                font-weight: 300;
+            }
+        }
+
+        &__title {
+            font-family: $font-title;
+            color: $gray;
+            font-weight: 400;
+            font-size: 30px;
+        }
+    }
+}
