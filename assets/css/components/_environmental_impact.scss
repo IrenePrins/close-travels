@@ -1,0 +1,14 @@
+.environmental_impact {
+    position: absolute;
+    //border: solid saddlebrown 3px;
+    border-radius: 100%;
+    width: 400px;
+    height: 400px;
+
+    &__circle {
+        background-color: $green;
+        width: 370px;
+        height: 370px;
+        border-radius: 100%;
+    }
+}
