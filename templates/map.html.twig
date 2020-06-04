@@ -9,7 +9,9 @@
             <h1 class="map-info__title">Click on the pointers<br> to see more information!</h1>
         </div>
         <div class="map">
-            <img class="map__map" src="{{ asset('build/images/Landen.png') }}">
+            <div class="map__map-wrapper">
+                <img class="map__map" src="{{ asset('build/images/Landen.png') }}">
+            </div>
 
             <a class="location location--berlin" href="{{ path('detail') }}">
                 <img src="{{ asset('build/images/location_brown.png') }}" class="location__pointer">

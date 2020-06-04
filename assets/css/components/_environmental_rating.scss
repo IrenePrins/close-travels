@@ -1,5 +1,4 @@
 .environment-rating {
-
     display: flex;
     flex-wrap: nowrap;
     margin: 0 auto;
@@ -11,13 +10,17 @@
     display: block;
 
     &__image {
-        height: 50px;
+        height: 35px;
+
+        @media screen and (min-width: 769px) {
+            height: 50px;
+        }
     }
 
     &__info {
         margin-left: 100px;
         position: relative;
-        color: $green;
+        color: $darker-green;
         cursor: pointer;
     }
 

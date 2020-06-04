@@ -6,6 +6,9 @@
                 <div class="transportation__image-wrapper">
                     <img class="transportation__image transportation__image--train" src="{{ asset('build/images/train.png') }}">
                 </div>
+                {% include '/components/environment_rating.html.twig' with {
+                    'modifier' : "2"
+                } %}
             </div>
             <div class="prices-transport__option">
                 <div class="transportation__image-wrapper">
@@ -57,9 +60,19 @@
             </div>
         </div>
         <div class="prices-housing">
-            <div class="housing-transport__option"><img class="transportation__image transportation__image--plane" src="{{ asset('build/images/plane.png') }}"></div>
-            <div class="housing-transport__option"><img class="transportation__image transportation__image--plane" src="{{ asset('build/images/plane.png') }}"></div>
-            <div class="housing-transport__option"><img class="transportation__image transportation__image--plane" src="{{ asset('build/images/plane.png') }}"></div>
+            <h2 class="prices-activities__title">Where will you spent the night?</h2>
+            <div class="prices-housing__option">
+                <h3 class="prices-activities__option-title">Steigenberger Hotel Am Kanzleramt</h3>
+                {% include './components/environment_rating.html.twig' with {
+                    'modifier' : "2"
+                } %}
+            </div>
+            <div class="prices-housing__option">
+                <h3 class="prices-activities__option-title">Deutscher Camping-Club LV Berlin</h3>
+                {% include './components/environment_rating.html.twig' with {
+                    'modifier' : "3"
+                } %}
+            </div>
         </div>
     </div>
 </div>

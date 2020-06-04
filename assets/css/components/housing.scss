@@ -10,13 +10,20 @@
     }
 
     &__option {
-        display: flex;
-        margin-bottom: 60px;
+
+        @media screen and (min-width: 769px) {
+            display: flex;
+            margin-bottom: 60px;
+        }
     }
 
     &__image {
-        width: 400px;
         border-radius: 25px;
+        width: 100%;
+
+        &-wrapper {
+            max-width: 400px;
+        }
     }
 
     &__content {
@@ -30,5 +37,11 @@
 
     &__icon {
         padding-right: 10px;
+    }
+
+    &__link {
+        text-decoration: none;
+        color: $darker-green;
+        font-size: 20px;
     }
 }

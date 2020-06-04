@@ -1,14 +1,40 @@
 .environmental_impact {
     position: absolute;
-    //border: solid saddlebrown 3px;
     border-radius: 100%;
+    border: 3px solid saddlebrown;
     width: 400px;
     height: 400px;
+
+    @media screen and (max-width: 769px) {
+        bottom: 0;
+    }
 
     &__circle {
         background-color: $green;
         width: 370px;
         height: 370px;
         border-radius: 100%;
+        position: relative;
+        top: 15px;
+        left: 15px;
+    }
+
+    &__content {
+        position: absolute;
+        top: 55px;
+        left: 75px;
+        font-family: $font-title;
+        color: $gray;
+        font-size: 20px;
+
+        h2 {
+            font-weight: 300;
+        }
+    }
+
+    .environment-rating {
+        .leaf__image {
+            height: 70px;
+        }
     }
 }

@@ -2,6 +2,8 @@
 
 namespace App\Controller;
 
+use App\Form\BookingType;
+use Symfony\Component\Form\FormFactoryInterface;
 use Symfony\Component\HttpFoundation\Response;
 use Symfony\Component\Routing\Annotation\Route;
 use Twig\Environment;
@@ -13,9 +15,16 @@ class DefaultController
      */
     private $twig;
 
-    public function __construct(Environment $twig)
+    /**
+     * @var FormFactoryInterface
+     */
+    private $formFactory;
+
+
+    public function __construct(Environment $twig, FormFactoryInterface $formFactory)
     {
         $this->twig = $twig;
+        $this->formFactory = $formFactory;
     }
 
     /**
@@ -39,6 +48,10 @@ class DefaultController
      */
     public function detail()
     {
-        return new Response($this->twig->render('detail.html.twig'));
+        $form  = $this->formFactory->create(BookingType::class);
+
+        return new Response($this->twig->render('detail.html.twig', [
+            'form' => $form->createView()
+        ]));
     }
 }

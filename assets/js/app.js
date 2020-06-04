@@ -13,3 +13,4 @@ import '../css/app.scss';
 
 import './slider';
 import './toolbox';
+import './check';

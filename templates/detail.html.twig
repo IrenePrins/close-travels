@@ -66,7 +66,118 @@
 
     {% include 'components/_transportation.html.twig' %}
     {% include 'components/housing.html.twig' %}
-    {% include 'components/_information_prices.html.twig' %}
 
+    <div class="content-wrapper">
+        <div class="prices">
+            <div class="prices-transport">
+
+                <h2 class="prices-activities__title">{{ form_label(form.transport, 'How will you travel to your destination?') }}</h2>
+                <div class="prices-transport__option">
+                    <div class="transportation__image-wrapper">
+                        <img class="transportation__image transportation__image--train" src="{{ asset('build/images/train.png') }}">
+                    </div>
+                    {% include '/components/environment_rating.html.twig' with {
+                        'modifier' : "2"
+                    } %}
+                    <div class="transportation__checkbox">
+                        {{ form_widget(form.transport.children[0], {'attr': {'class': 'transport_field'}}) }}
+                    </div>
+                </div>
+                <div class="prices-transport__option">
+                    <div class="transportation__image-wrapper">
+                        <img class="transportation__image transportation__image--bus" src="{{ asset('build/images/bus.png') }}">
+                    </div>
+                    {% include '/components/environment_rating.html.twig' with {
+                        'modifier' : "2"
+                    } %}
+                    <div class="transportation__checkbox">
+                        {{ form_widget(form.transport.children[1], {'attr': {'class': 'transport_field'}}) }}
+                    </div>
+                </div>
+                <div class="prices-transport__option">
+                    <div class="transportation__image-wrapper">
+                        <img class="transportation__image transportation__image--car" src="{{ asset('build/images/car2.png') }}">
+                    </div>
+                    {% include '/components/environment_rating.html.twig' with {
+                        'modifier' : "2"
+                    } %}
+                    <div class="transportation__checkbox">
+                        {{ form_widget(form.transport.children[2], {'attr': {'class': 'transport_field'}}) }}
+                    </div>
+                </div>
+                <div class="prices-transport__option">
+                    <div class="transportation__image-wrapper">
+                        <img class="transportation__image transportation__image--plane" src="{{ asset('build/images/plane.png') }}">
+                    </div>
+                    {% include '/components/environment_rating.html.twig' with {
+                        'modifier' : "0",
+                    } %}
+                    <div class="transportation__checkbox">
+                        {{ form_widget(form.transport.children[3], {'attr': {'class': 'transport_field'}}) }}
+                    </div>
+                </div>
+            </div>
+
+            {% include './components/environmental_impact.html.twig' %}
+
+            <div class="prices-activities">
+                <h2 class="prices-activities__title">{{ form_label(form.housing, 'What activities will you enjoy?') }}</h2>
+                <div class="prices-activities__option">
+                    <h3 class="prices-activities__option-title">Brandenburg Tor</h3>
+                    {% include 'components/environment_rating.html.twig' with {
+                        'modifier' : "4"
+                    } %}
+                    <div class="transportation__checkbox">
+                        {{ form_widget(form.activities.children[0], {'attr': {'class': 'transport_field'}}) }}
+                    </div>
+                </div>
+                <div class="prices-activities__option">
+                    <h3 class="prices-activities__option-title">Holocaust Museum</h3>
+                    {% include 'components/environment_rating.html.twig' with {
+                        'modifier' : "3"
+                    } %}
+                    <div class="transportation__checkbox">
+                        {{ form_widget(form.activities.children[1], {'attr': {'class': 'transport_field'}}) }}
+                    </div>
+                </div>
+                <div class="prices-activities__option">
+                    <h3 class="prices-activities__option-title">Citytour on bike</h3>
+                    {% include 'components/environment_rating.html.twig' with {
+                        'modifier' : "4"
+                    } %}
+                    <div class="transportation__checkbox">
+                        {{ form_widget(form.activities.children[2], {'attr': {'class': 'transport_field'}}) }}
+                    </div>
+                </div>
+            </div>
+            <div class="prices-housing">
+                <h2 class="prices-activities__title">{{ form_label(form.housing, 'Where will you spent the night?') }}</h2>
+                <div class="prices-housing__option">s
+                    <h3 class="prices-activities__option-title">Steigenberger Hotel Am Kanzleramt</h3>
+                    {% include './components/environment_rating.html.twig' with {
+                        'modifier' : "2"
+                    } %}
+                    <div class="transportation__checkbox">
+                        {{ form_widget(form.housing.children[0], {'attr': {'class': 'transport_field'}}) }}
+                    </div>
+                </div>
+                <div class="prices-housing__option">
+                    <h3 class="prices-activities__option-title">Deutscher Camping-Club LV Berlin</h3>
+                    {% include './components/environment_rating.html.twig' with {
+                        'modifier' : "3"
+                    } %}
+                    <div class="transportation__checkbox">
+                        {{ form_widget(form.housing.children[1], {'attr': {'class': 'transport_field'}}) }}
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="content-wrapper">
+        <div class="detail-button-wrapper">
+            <a class="detail-button button button--yellow" href="{{ path('map')}}">Bevestig je keuzes</a>
+        </div>
+    </div>
 </div>
 {% endblock %}
