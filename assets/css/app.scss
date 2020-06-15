@@ -1,12 +1,17 @@
 @import 'variables.scss';
 @import 'homepage.scss';
 @import 'map.scss';
+@import 'confirmation';
+
 @import 'components/navigation';
 @import 'components/environmental_rating';
 @import 'components/environmental_impact';
 @import 'components/transportation';
 @import 'components/prices';
 @import 'components/housing';
+@import 'components/brandbox';
+@import 'components/footer';
+
 @import 'detail.scss';
 @import 'form/form.scss';
 @import 'sidemenu.scss';

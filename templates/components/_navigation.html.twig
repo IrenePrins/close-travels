@@ -3,14 +3,14 @@
         <li class="navigation__list-item"><a href="{{ path('homepage')}}" class="navigation__item">HOME</a></li>
         <li class="navigation__list-item"><a href="{{ path('map')}}" class="navigation__item">MAP</a></li>
     </ul>
-    <div class="navigation__user">
-        <ul class="navigation__list">
-            {% if(app.user is null) %}
-                <li class="navigation__list-item navigation__list-item--user"><a href="{{ path('app_login')}}" class="navigation__item navigation__item--orange">Login</a></li>
-                <li class="navigation__list-item navigation__list-item--user"><a href="{{ path('app_register')}}" class="navigation__item navigation__item--orange">Register</a></li>
-            {% else %}
-                <li class="navigation__list-item navigation__list-item--user"><a href="{{ path('admin')}}" class="navigation__item navigation__item--orange">Admin</a></li>
-            {% endif %}
-        </ul>
-    </div>
+{#    <div class="navigation__user">#}
+{#        <ul class="navigation__list">#}
+{#            {% if(app.user is null) %}#}
+{#                <li class="navigation__list-item navigation__list-item--user"><a href="{{ path('app_login')}}" class="navigation__item navigation__item--orange">Login</a></li>#}
+{#                <li class="navigation__list-item navigation__list-item--user"><a href="{{ path('app_register')}}" class="navigation__item navigation__item--orange">Register</a></li>#}
+{#            {% else %}#}
+{#                <li class="navigation__list-item navigation__list-item--user"><a href="{{ path('admin')}}" class="navigation__item navigation__item--orange">Admin</a></li>#}
+{#            {% endif %}#}
+{#        </ul>#}
+{#    </div>#}
 </div>

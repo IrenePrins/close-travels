@@ -13,13 +13,14 @@
         padding-bottom: 100px;
 
         @media screen and (min-width: 769px) {
-            width: 50%;
+            width: 60%;
         }
 
         &__option {
             display: flex;
 
             &-title {
+                flex-basis: 30%;
                 font-family: $font-title;
                 color: $green;
                 font-weight: 300;
@@ -34,6 +35,19 @@
                 font-size: 30px;
             }
         }
+
+        .environment-rating {
+            flex-basis: 20%;
+            margin: 0 50px;
+        }
+
+        &__price {
+            flex-basis: 20%;
+            padding-top: 29px;
+            padding-right: 15px;
+            font-size: 20px;
+            color: $darker-green;
+        }
     }
 
     &-transport {
@@ -47,17 +61,26 @@
             display: flex;
         }
 
+        .environment-rating {
+            flex-basis: 20%;
+            margin: 0;
+        }
+
         .transportation {
+
+            &__price {
+                flex-basis: 20%;
+                display: block;
+                padding-top: 32px;
+                color: $darker-green;
+                font-size: 20px;
+            }
 
             &__image {
 
                 &-wrapper {
-                    width: 150px;
+                    flex-basis: 30%;
                     padding-bottom: 50px;
-
-                    @media screen and (min-width: 769px) {
-                        width: 300px;
-                    }
                 }
 
                 &--car {
@@ -99,10 +122,65 @@
         &__option {
             display: flex;
 
+            &-title {
+                flex-basis: 35%;
+            }
+
             .environment-rating {
-                margin: 0;
                 padding-left: 80px;
+                margin: 0 150px 0 50px;
             }
         }
     }
+
+    &-date {
+        width: 60%;
+        margin-left: auto;
+        margin-top: 150px;
+
+        &__date {
+            display: flex;
+            margin-bottom: 20px;
+
+            .date-picker {
+                margin-left: 30px;
+            }
+        }
+
+        &__title {
+            font-family: $font-title;
+            color: #707070;
+            font-weight: 400;
+            font-size: 30px;
+            margin-bottom: 50px;
+        }
+
+        &__subtitle {
+            flex-basis: 20%;
+
+            label {
+                color: $green;
+                font-family: $font-title;
+                font-weight: 300;
+            }
+        }
+    }
+
+
+    &-email {
+        display: flex;
+        margin-top: 100px;
+
+        &__title label {
+            font-family: $font-title;
+            color: #707070;
+            font-weight: 400;
+            font-size: 20px;
+            margin-bottom: 50px;
+            margin-right: 50px;
+        }
+    }
+}
+.transportation__checkbox {
+    position: relative;
 }

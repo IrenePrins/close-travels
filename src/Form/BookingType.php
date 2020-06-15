@@ -4,6 +4,8 @@ namespace App\Form;
 
 use Symfony\Component\Form\AbstractType;
 use Symfony\Component\Form\Extension\Core\Type\ChoiceType;
+use Symfony\Component\Form\Extension\Core\Type\DateType;
+use Symfony\Component\Form\Extension\Core\Type\EmailType;
 use Symfony\Component\Form\FormBuilderInterface;
 
 class BookingType extends AbstractType {
@@ -29,6 +31,7 @@ class BookingType extends AbstractType {
                         'train' => 'Train',
                         'plane' => 'Plane'
                     ],
+                    'attr' => ['class' => 'transport-option']
                 ])
             ->add(
                 'activities',
@@ -54,6 +57,21 @@ class BookingType extends AbstractType {
                         'hotel' => 'Steigenberger Hotel Am Kanzleramt',
                         'camping' => 'Deutscher Camping-Club LV Berlin'
                     ],
-                ]);
+                ])
+            ->add(
+                'startDate',
+                DateType::class,
+                [
+                    'widget' => 'single_text',
+                    'attr' => ['class' => 'date-picker']
+                ])
+            ->add(
+                'endDate',
+                DateType::class,
+                [
+                    'widget' => 'single_text',
+                    'attr' => ['class' => 'date-picker']
+                ])
+            ->add('email', EmailType::class);
     }
 }

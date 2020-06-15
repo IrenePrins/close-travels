@@ -16,7 +16,7 @@
     <div class="detail__introduction-wrapper">
         <div class="detail__introduction">
             <h2 class="detail__introduction-title">Berlin, the city of Freedom</h2>
-            <p class="detail__introduction-text">Berlin (/bɜːrˈlɪn/; German: [bɛʁˈliːn] (About this soundlisten)) is the capital and largest city of Germany by both area and population.[5][6] Its 3,769,495 (2019)[2] inhabitants make it the most populous city proper of the European Union.[7] The city is one of Germany's 16 federal states. It is surrounded by the state of Brandenburg, and contiguous with Potsdam, Brandenburg's capital. The two cities are at the center of the Berlin-Brandenburg capital region, which is, with about six million inhabitants and an area of more than 30,000 km²,[8] Germany's third-largest metropolitan region after the Rhine-Ruhr and Rhine-Main regions.</p>
+            <p class="detail__introduction-text">Berlin is the capital and largest city of Germany by both area and population. Its 3,769,495 inhabitants make it the most populous city proper of the European Union. The city is one of Germany's 16 federal states. It is surrounded by the state of Brandenburg, and contiguous with Potsdam, Brandenburg's capital. The two cities are at the center of the Berlin-Brandenburg capital region, which is, with about six million inhabitants and an area of more than 30,000 km², Germany's third-largest metropolitan region after the Rhine-Ruhr and Rhine-Main regions.</p>
         </div>
     </div>
     <div class="content-wrapper">
@@ -67,10 +67,10 @@
     {% include 'components/_transportation.html.twig' %}
     {% include 'components/housing.html.twig' %}
 
+    {{ form_start(form) }}
     <div class="content-wrapper">
         <div class="prices">
             <div class="prices-transport">
-
                 <h2 class="prices-activities__title">{{ form_label(form.transport, 'How will you travel to your destination?') }}</h2>
                 <div class="prices-transport__option">
                     <div class="transportation__image-wrapper">
@@ -79,6 +79,9 @@
                     {% include '/components/environment_rating.html.twig' with {
                         'modifier' : "2"
                     } %}
+                    <div class="transportation__price">
+                        <span>100 euro retour</span>
+                    </div>
                     <div class="transportation__checkbox">
                         {{ form_widget(form.transport.children[0], {'attr': {'class': 'transport_field'}}) }}
                     </div>
@@ -90,6 +93,9 @@
                     {% include '/components/environment_rating.html.twig' with {
                         'modifier' : "2"
                     } %}
+                    <div class="transportation__price">
+                        <span>60 euro retour</span>
+                    </div>
                     <div class="transportation__checkbox">
                         {{ form_widget(form.transport.children[1], {'attr': {'class': 'transport_field'}}) }}
                     </div>
@@ -101,6 +107,8 @@
                     {% include '/components/environment_rating.html.twig' with {
                         'modifier' : "2"
                     } %}
+                    <div class="transportation__price">
+                    </div>
                     <div class="transportation__checkbox">
                         {{ form_widget(form.transport.children[2], {'attr': {'class': 'transport_field'}}) }}
                     </div>
@@ -112,6 +120,9 @@
                     {% include '/components/environment_rating.html.twig' with {
                         'modifier' : "0",
                     } %}
+                    <div class="transportation__price">
+                        <span>90 euro retour</span>
+                    </div>
                     <div class="transportation__checkbox">
                         {{ form_widget(form.transport.children[3], {'attr': {'class': 'transport_field'}}) }}
                     </div>
@@ -127,6 +138,9 @@
                     {% include 'components/environment_rating.html.twig' with {
                         'modifier' : "4"
                     } %}
+                    <div class="prices-activities__price">
+                        <span>0 euro</span>
+                    </div>
                     <div class="transportation__checkbox">
                         {{ form_widget(form.activities.children[0], {'attr': {'class': 'transport_field'}}) }}
                     </div>
@@ -136,6 +150,9 @@
                     {% include 'components/environment_rating.html.twig' with {
                         'modifier' : "3"
                     } %}
+                    <div class="prices-activities__price">
+                        <span>0 euro</span>
+                    </div>
                     <div class="transportation__checkbox">
                         {{ form_widget(form.activities.children[1], {'attr': {'class': 'transport_field'}}) }}
                     </div>
@@ -145,6 +162,9 @@
                     {% include 'components/environment_rating.html.twig' with {
                         'modifier' : "4"
                     } %}
+                    <div class="prices-activities__price">
+                        <span>30 euro per person</span>
+                    </div>
                     <div class="transportation__checkbox">
                         {{ form_widget(form.activities.children[2], {'attr': {'class': 'transport_field'}}) }}
                     </div>
@@ -152,32 +172,53 @@
             </div>
             <div class="prices-housing">
                 <h2 class="prices-activities__title">{{ form_label(form.housing, 'Where will you spent the night?') }}</h2>
-                <div class="prices-housing__option">s
-                    <h3 class="prices-activities__option-title">Steigenberger Hotel Am Kanzleramt</h3>
+                <div class="prices-housing__option">
+                    <h3 class="prices-activities__option-title prices-housing__option-title">Steigenberger Hotel Am Kanzleramt</h3>
                     {% include './components/environment_rating.html.twig' with {
                         'modifier' : "2"
                     } %}
+                    <div class="prices-activities__price">
+                        <span>150 per night</span>
+                    </div>
                     <div class="transportation__checkbox">
                         {{ form_widget(form.housing.children[0], {'attr': {'class': 'transport_field'}}) }}
                     </div>
                 </div>
                 <div class="prices-housing__option">
-                    <h3 class="prices-activities__option-title">Deutscher Camping-Club LV Berlin</h3>
+                    <h3 class="prices-activities__option-title prices-housing__option-title">Deutscher Camping-Club LV Berlin</h3>
                     {% include './components/environment_rating.html.twig' with {
                         'modifier' : "3"
                     } %}
+                    <div class="prices-activities__price">
+                        <span>8 euro per person</span>
+                    </div>
                     <div class="transportation__checkbox">
                         {{ form_widget(form.housing.children[1], {'attr': {'class': 'transport_field'}}) }}
                     </div>
                 </div>
             </div>
+            <div class="prices-date">
+                <h2 class="prices-date__title">On what date will you travel?</h2>
+                <div class="prices-date__date">
+                    <h3 class="prices-date__subtitle">{{ form_label(form.startDate) }}</h3>
+                    {{ form_widget(form.startDate) }}
+                </div>
+                <div class="prices-date__date">
+                    <h3 class="prices-date__subtitle">{{ form_label(form.endDate) }}</h3>
+                    {{ form_widget(form.endDate) }}
+                </div>
+            </div>
+            <div class="prices-email">
+                <h3 class="prices-email__title">{{ form_label(form.email, 'What is your email?') }}</h3>
+                {{ form_widget(form.email) }}
+            </div>
         </div>
     </div>
-
     <div class="content-wrapper">
         <div class="detail-button-wrapper">
-            <a class="detail-button button button--yellow" href="{{ path('map')}}">Bevestig je keuzes</a>
+            <button type="submit" class="detail-button button button--yellow">Bevestig je keuzes</button>
         </div>
     </div>
+    {{ form_end(form) }}
 </div>
 {% endblock %}

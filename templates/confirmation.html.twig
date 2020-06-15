@@ -1,0 +1,45 @@
+{% extends 'base.html.twig' %}
+
+{% block content %}
+
+    {% include 'components/_brandbox.html.twig' with {
+        title: 'Thank you for booking with Close Travels',
+        subtitle: 'And helping the environment',
+        image: 'build/images/berlin3.jpg',
+        buttontext: 'Check the map'
+    } %}
+
+    <div class="content-wrapper">
+        <h1 class="prices-activities__title">Confirmation Booking</h1>
+        <h3 class="prices-activities__title">Thank you for booking with Close Travels!</h3>
+
+        <div class="confirmation-wrapper">
+            <div class="confirmation">
+                <h3 class="confirmation__title">Activiteiten</h3>
+                {% for key, value in data.activities %}
+                    <div class="confirmation__item">
+                        {{ value }}
+                    </div>
+                {% endfor %}
+            </div>
+            <div class="confirmation">
+                <h3 class="confirmation__title">Housing</h3>
+                {% for key, value in data.housing %}
+                    <div class="confirmation__item">
+                        {{ value }}
+                    </div>
+                {% endfor %}
+            </div>
+            <div class="confirmation">
+                <h3 class="confirmation__title">Transport</h3>
+                {% for key, value in data.transport %}
+                    <div class="confirmation__item">
+                        {{ value }}
+                    </div>
+                {% endfor %}
+            </div>
+        </div>
+
+        <div class="confirmation__item">Check your email for your confirmation email!</div>
+    </div>
+{% endblock %}

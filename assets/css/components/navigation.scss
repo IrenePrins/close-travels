@@ -1,7 +1,7 @@
 .navigation {
     display: flex;
-    background-color: rgba($orange, .4);
     max-width: 80%;
+    background-color: rgba($orange, .4);
     border-radius: 50px;
     border: 1px solid $orange;
     padding: 0 30px;
@@ -13,10 +13,6 @@
 
         &-item {
             list-style: none;
-
-            &--user {
-
-            }
         }
     }
 
@@ -26,6 +22,7 @@
         font-size: 30px;
         font-family: 'Roboto Thin', monospace;
         padding: 0 10px;
+        z-index: 100;
 
         &--orange {
             color: $orange;

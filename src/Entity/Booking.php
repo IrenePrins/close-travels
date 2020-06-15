@@ -22,14 +22,14 @@ class Booking
     private $activities = [];
 
     /**
-     * @ORM\Column(type="string", length=255, nullable=true)
+     * @ORM\Column(type="array", nullable=true)
      */
-    private $transport;
+    private $transport = [];
 
     /**
-     * @ORM\Column(type="string", length=255, nullable=true)
+     * @ORM\Column(type="array", nullable=true)
      */
-    private $housing;
+    private $housing = [];
 
     /**
      * @ORM\Column(type="date", nullable=true)
@@ -40,6 +40,11 @@ class Booking
      * @ORM\Column(type="date", nullable=true)
      */
     private $endDate;
+
+    /**
+     * @ORM\Column(type="string", length=255)
+     */
+    private $email;
 
     public function getId(): ?int
     {
@@ -58,24 +63,24 @@ class Booking
         return $this;
     }
 
-    public function getTransport(): ?string
+    public function getTransport(): ?array
     {
         return $this->transport;
     }
 
-    public function setTransport(?string $transport): self
+    public function setTransport(?array $transport): self
     {
         $this->transport = $transport;
 
         return $this;
     }
 
-    public function getHousing(): ?string
+    public function getHousing(): ?array
     {
         return $this->housing;
     }
 
-    public function setHousing(?string $housing): self
+    public function setHousing(?array $housing): self
     {
         $this->housing = $housing;
 
@@ -102,6 +107,18 @@ class Booking
     public function setEndDate(?\DateTimeInterface $endDate): self
     {
         $this->endDate = $endDate;
+
+        return $this;
+    }
+
+    public function getEmail(): ?string
+    {
+        return $this->email;
+    }
+
+    public function setEmail(string $email): self
+    {
+        $this->email = $email;
 
         return $this;
     }

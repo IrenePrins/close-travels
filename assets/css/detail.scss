@@ -4,36 +4,39 @@
         position: relative;
         font-size: 62px;
 
-        &::after {
-            content: '';
-            display: block;
-            position: absolute;
-            height: 3px;
-            width: 130px;
-            top: 50%;
-            left: 29%;
-            background-color: $orange;
-        }
+        @media screen and (max-width: 769px) {
+            &::after {
+                content: '';
+                display: block;
+                position: absolute;
+                height: 3px;
+                width: 130px;
+                top: 50%;
+                left: 29%;
+                background-color: $orange;
+            }
 
-        &::before {
-            content: '';
-            display: block;
-            position: absolute;
-            height: 3px;
-            width: 130px;
-            top: 50%;
-            right: 29%;
-            background-color: $orange;
+            &::before {
+                content: '';
+                display: block;
+                position: absolute;
+                height: 3px;
+                width: 130px;
+                top: 50%;
+                right: 29%;
+                background-color: $orange;
+            }
         }
     }
 
     &__introduction {
-        @media screen and (max-width: 769px) {
-            padding: 25px 0;
-        }
         padding: 25px 0;
         max-width: 1160px;
         margin: 100px auto;
+
+        @media screen and (max-width: 769px) {
+            padding: 25px;
+        }
 
         &-wrapper {
             background-color: $orange;

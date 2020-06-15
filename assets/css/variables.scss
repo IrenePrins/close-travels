@@ -52,6 +52,7 @@ h1 {
     font-size: 18px;
     margin: 15px 15px 15px 0;
     cursor: pointer;
+    border: 1px $baba solid;
 
     &--yellow {
         background-color: $yellow;
@@ -85,9 +86,9 @@ h1 {
     }
 }
 
-input[type=checkbox] {
+input[type=checkbox], input[type=radio] {
     position: absolute;
-    //left: -9999px;
+    top: 20px;
 
     &::before {
         position: absolute;
@@ -99,10 +100,13 @@ input[type=checkbox] {
         border-radius: 4px;
     }
 
-    &::after {
-        content: '';
-        width: 15px;
-        height: 15px;
-        background-color: $checkbox;
+    &:checked {
+        &::after {
+            font-family: "Material Icons";
+            content: "done";
+            z-index: 100;
+            font-size: 35px;
+            position: absolute;
+        }
     }
 }

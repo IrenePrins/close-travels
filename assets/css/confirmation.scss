@@ -1,0 +1,14 @@
+.confirmation {
+    &__title {
+        color: $orange;
+        margin-bottom: 0;
+    }
+
+    &__item {
+        padding-left: 20px;
+    }
+
+    &-wrapper {
+        margin-bottom: 70px;
+    }
+}
